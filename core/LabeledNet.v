@@ -2,7 +2,8 @@ Require Import Verdi.Verdi.
 Require Import InfSeqExt.infseq.
 Require Import InfSeqExt.exteq.
 
-Require Import mathcomp.ssreflect.ssreflect.
+Require Import ssr.ssreflect.
+Set Bullet Behavior "None".
 
 Set Implicit Arguments.
 

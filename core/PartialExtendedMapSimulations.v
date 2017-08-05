@@ -9,7 +9,8 @@ Require Import FunctionalExtensionality.
 Require Import Sumbool.
 Require Import Sorting.Permutation.
 
-Require Import mathcomp.ssreflect.ssreflect.
+Require Import ssr.ssreflect.
+Set Bullet Behavior "None".
 
 Set Implicit Arguments.
 

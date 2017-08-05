@@ -7,7 +7,8 @@ Require Import StructTact.Util.
 Require Import FunctionalExtensionality.
 Require Import Verdi.TotalMapSimulations.
 
-Require Import mathcomp.ssreflect.ssreflect.
+Require Import ssr.ssreflect.
+Set Bullet Behavior "None".
 
 Set Implicit Arguments.
 

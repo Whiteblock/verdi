@@ -9,7 +9,8 @@ Require Import Sumbool.
 Require Import Sorting.Permutation.
 Require Import Verdi.DynamicNetLemmas.
 
-Require Import mathcomp.ssreflect.ssreflect.
+Require Import ssr.ssreflect.
+Set Bullet Behavior "None".
 
 Set Implicit Arguments.
 
@@ -761,7 +762,7 @@ case H_m: (pt_map_msg m') => [m1|].
   move => H_in_map.
   case: H_in_map => H_in_map.
     inversion H_in_map.    
-    rewrite H_in_f in H_m; last by left.
+    rewrite H_in_f in H_m; first by left.
     by rewrite -H1.
   move: H_in_map.
   apply: (IH _ m0) => //.

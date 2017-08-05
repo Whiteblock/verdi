@@ -1,7 +1,8 @@
 Require Import Verdi.Verdi.
 Require Import Verdi.DynamicNetLemmas.
 
-Require Import mathcomp.ssreflect.ssreflect.
+Require Import ssr.ssreflect.
+Set Bullet Behavior "None".
 
 Set Implicit Arguments.
 

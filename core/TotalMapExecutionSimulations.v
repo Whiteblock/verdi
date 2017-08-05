@@ -10,7 +10,8 @@ Require Import FunctionalExtensionality.
 
 Local Arguments update {_} {_} _ _ _ _ _ : simpl never.
 
-Require Import mathcomp.ssreflect.ssreflect.
+Require Import ssr.ssreflect.
+Set Bullet Behavior "None".
 
 Set Implicit Arguments.
 

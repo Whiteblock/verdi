@@ -7,7 +7,8 @@ Require Import FunctionalExtensionality.
 Require Import Sorting.Permutation.
 Require Import Sumbool.
 
-Require Import mathcomp.ssreflect.ssreflect.
+Require Import ssr.ssreflect.
+Set Bullet Behavior "None".
 
 Set Implicit Arguments.
 
@@ -941,18 +942,17 @@ case => n m l IH H_fail H_nd.
 inversion H_nd.
 rewrite /=.
 apply NoDup_cons.
-  have H_f := H_fail (n, m).
+  have H_f := H_fail (n, m) (or_introl (refl_equal _)).
   rewrite /= in H_f.
   move => H_in.
-   have H_inf := @msg_in_map m' _ _ _ _ H_in.
-   rewrite H_inf in H_in.
-     contradict H_in.
-     apply tot_map_in_in.
-       move => nm H_in_nm.
-       apply: H_fail.
-       by right.
-     rewrite H_f // in H1.
-     by left.
+  have H_inf := @msg_in_map m' _ _ _ _ H_in.
+  rewrite H_inf in H_in; last first.
+    contradict H_in.
+    apply tot_map_in_in.
+      move => nm H_in_nm.
+      apply: H_fail.
+      by right.
+    by rewrite H_f // in H1.
    move => nm H_in_f.
    apply: H_fail.
    by right.
