@@ -178,7 +178,7 @@ end; rewrite /=.
 - move => n H_a n'. 
   have H_neq: h <> n by eauto.
   have H_not_in: ~ In n (odnwNodes net0) by eauto.
-  rewrite collate_ls_not_in; last by rewrite collate_neq //; eauto.
+  rewrite collate_ls_not_in; try by rewrite collate_neq //; eauto.
   apply: not_in_not_in_filter_rel.
   move => H_in.
   case: H_not_in.

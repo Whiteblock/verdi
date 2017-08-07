@@ -946,16 +946,13 @@ apply NoDup_cons.
   rewrite /= in H_f.
   move => H_in.
   have H_inf := @msg_in_map m' _ _ _ _ H_in.
-  rewrite H_inf in H_in; last first.
-    contradict H_in.
-    apply tot_map_in_in.
-      move => nm H_in_nm.
-      apply: H_fail.
-      by right.
-    by rewrite H_f // in H1.
-   move => nm H_in_f.
-   apply: H_fail.
-   by right.
+  rewrite H_inf in H_in; try by move => nm H_in_f; apply: H_fail; right.
+  contradict H_in.
+  apply tot_map_in_in.
+    move => nm H_in_nm.
+    apply: H_fail.
+    by right.
+  by rewrite H_f // in H1.
 apply: IH => //.
 move => nm H_in_nm.
 apply: H_fail.

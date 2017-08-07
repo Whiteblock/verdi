@@ -762,7 +762,7 @@ case H_m: (pt_map_msg m') => [m1|].
   move => H_in_map.
   case: H_in_map => H_in_map.
     inversion H_in_map.    
-    rewrite H_in_f in H_m; first by left.
+    rewrite H_in_f in H_m; try by left.
     by rewrite -H1.
   move: H_in_map.
   apply: (IH _ m0) => //.
