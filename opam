@@ -1,5 +1,5 @@
 opam-version: "1.2"
-version: "8.7.dev"
+version: "8.8.dev"
 maintainer: "palmskog@gmail.com"
 
 homepage: "https://github.com/uwplse/verdi"
@@ -14,10 +14,10 @@ build: [
 install: [ make "install" ]
 remove: [ "sh" "-c" "rm -rf '%{lib}%/coq/user-contrib/Verdi'" ]
 depends: [
-  "coq" {>= "8.7" & < "8.8~"}
+  "coq" {= "dev"}
   "InfSeqExt" {= "dev"}
   "StructTact" {= "dev"}
-  "cheerios" {= "8.7.dev"}
+  "cheerios" {= "8.8.dev"}
 ]
 
 tags: [
@@ -33,4 +33,5 @@ authors: [
   "Steve Anton <>"
   "Karl Palmskog <>"
   "Ryan Doenges <>"
+  "Justin Adsuara <>"
 ]

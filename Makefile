@@ -1,7 +1,7 @@
 # sets COQVERSION
 include Makefile.detect-coq-version
 
-ifeq (,$(filter $(COQVERSION),8.5 8.6 8.7 trunk))
+ifeq (,$(filter $(COQVERSION),8.5 8.6 8.7 8.8 trunk))
 $(error "Verdi is only compatible with Coq version 8.5 or later")
 endif
 

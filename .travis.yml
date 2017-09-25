@@ -11,8 +11,7 @@ addons:
       - aspcud
 env:
   matrix:
-    - DOWNSTREAM=none COQ_VERSION=8.7.dev
-    - DOWNSTREAM=verdi-raft COQ_VERSION=8.7.dev
+    - DOWNSTREAM=none COQ_VERSION=dev
 before_install:
   - openssl aes-256-cbc -K $encrypted_130bc391cda8_key -iv $encrypted_130bc391cda8_iv -in .travis/travis_rsa.enc -out .travis/travis_rsa -d
   - cp .travis/travis_rsa ~/.ssh
